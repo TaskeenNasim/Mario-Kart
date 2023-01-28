@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+.sky {
+    height: 30vh;
+    background-color: lightskyblue;
+}
+
+.grass {
+    height: 20vh;
+    background-color: #5fd068;
+}
+
+.road {
+    height: calc(100vh - 30vh - 20vh);
+    background-color: dimgray;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.lines {
+    border: 5px dashed #fff;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 260px;
+}
+
+
+/* Keyframes animation */
+
+
+/* from - to */
+
+@keyframes drive {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(120vw);
+    }
+}
+
+img {
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
